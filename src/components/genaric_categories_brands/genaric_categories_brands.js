@@ -39,8 +39,8 @@ const GenaricCategoriesBrands = ({ apiEndpointsArr,backgroundColor,imageStyles,h
       <div className={categoriesBrandsStyles.mainCategoriesSlider}>
         <Swiper
          freeMode={true}
-          slidesPerView={6}
-          spaceBetween={110}
+         slidesPerView={6}
+         spaceBetween={110}
           navigation={true}
           modules={[Navigation,FreeMode]}
           className={`${categoriesBrandsStyles["mySwiper"]} ${categoriesBrandsStyles.swiper} test`}
