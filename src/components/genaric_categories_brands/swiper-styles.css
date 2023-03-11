@@ -1,5 +1,12 @@
 .test >   .swiper-button-prev, .test > .swiper-button-next {
     top:35% !important;
-    display: none;
 
+  }
+
+  @media screen and (max-width:500px) {
+    .test >   .swiper-button-prev, .test > .swiper-button-next {
+
+      display: none;
+  
+    }
   }

@@ -111,7 +111,7 @@ header > div:nth-child(3) > div:last-child  > span{
     position: absolute;
     top: -8%;
     left: 59%;
-    width: 15px;
+    width: 18px;
     height: 15px;
     border-radius: 50%;
     background-color: #2D2F82;
@@ -121,6 +121,8 @@ header > div:nth-child(3) > div:last-child  > span{
     -o-border-radius: 50%;
     color: #FFFFFF;
     font-size: .6rem;
+    text-align: center;
+    padding-top: 2px;
 }
 .DrawerIconContainer{
     display: none;

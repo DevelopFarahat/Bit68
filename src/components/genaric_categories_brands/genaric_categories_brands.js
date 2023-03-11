@@ -14,6 +14,7 @@ import axios from "axios";
 
 const GenaricCategoriesBrands = ({ apiEndpointsArr,backgroundColor,imageStyles,headline }) => {
   const [mainSlidesArr, setMainSlidesArr] = useState([]);
+  const [slidePreoperities,setSlidePreoperities] = useState({slidesPerView:6,spaceBetween:120});
   useEffect(() => {
     let abortController;
     abortController = new AbortController();
@@ -33,14 +34,25 @@ const GenaricCategoriesBrands = ({ apiEndpointsArr,backgroundColor,imageStyles,h
     })();
     return () => abortController?.abort();
   }, []);
+
+  useEffect(()=>{
+    function handleResize() {
+      console.log("width: ", window.innerWidth, "px");
+      if(window.innerWidth <= 700)
+      setSlidePreoperities({slidesPerView:'auto',spaceBetween:0});
+      else setSlidePreoperities({slidesPerView:6,spaceBetween:120});
+    }
+    window.addEventListener('resize',handleResize)
+    return ()=> window.removeEventListener('resize',handleResize);
+  },[]);
   return (
     <div className={categoriesBrandsStyles.mainCategoriesContainer}>
       <span>{headline}</span>
       <div className={categoriesBrandsStyles.mainCategoriesSlider}>
         <Swiper
          freeMode={true}
-         slidesPerView={6}
-         spaceBetween={110}
+         slidesPerView={slidePreoperities.slidesPerView}
+         spaceBetween={slidePreoperities.spaceBetween}
           navigation={true}
           modules={[Navigation,FreeMode]}
           className={`${categoriesBrandsStyles["mySwiper"]} ${categoriesBrandsStyles.swiper} test`}
