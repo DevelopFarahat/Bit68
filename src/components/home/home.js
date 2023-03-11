@@ -16,52 +16,62 @@ import Footer from "../footer/footer";
 const Home = () => {
   const categoriesEndpointsAPI = [
     "https://api-task.bit68.com/en/api/categories",
-    "https://api-task.bit68.com/en/api/categories/?page=2"
+    "https://api-task.bit68.com/en/api/categories/?page=2",
   ];
   const brandsEndpointsApi = [
     "https://api-task.bit68.com/en/api/brands",
-    "https://api-task.bit68.com/en/api/brands/?page=2"
+    "https://api-task.bit68.com/en/api/brands/?page=2",
   ];
 
   const categoriesImagesStyles = {
-    "width":"100%",
-    "objectFit":"cover",
-    "objectPosition":"50% 50%"
-  }
+    width: "100%",
+    objectFit: "cover",
+    objectPosition: "50% 50%",
+  };
   const brandsImagesStyles = {
-    "width":"60%",
-    "objectFit":"contain",
-    "objectPosition":"46% 42%"
-  }
-        
-        const categoriesSlidesImagesArr = [
-            {id:0,image:CategoryImageOne},
-            {id:1,image:CategorycImageTwo},
-            {id:2,image:CategoryImageThree},
-            {id:3,image:CategoryImageFour},
-        ]
-        const brandsSlidesImagesArr = [
-          {id:0,image:brandImagesOne},
-          {id:1,image:brandImagesTwo},
-          {id:2,image:brandImagesThree},
-          {id:3,image:brandImagesFour},
-        
-        ]
+    width: "60%",
+    objectFit: "contain",
+    objectPosition: "46% 42%",
+  };
 
-    
-    return (
+  const categoriesSlidesImagesArr = [
+    { id: 0, image: CategoryImageOne },
+    { id: 1, image: CategorycImageTwo },
+    { id: 2, image: CategoryImageThree },
+    { id: 3, image: CategoryImageFour },
+  ];
+  const brandsSlidesImagesArr = [
+    { id: 0, image: brandImagesOne },
+    { id: 1, image: brandImagesTwo },
+    { id: 2, image: brandImagesThree },
+    { id: 3, image: brandImagesFour },
+  ];
+
+  return (
     <>
       <Header />
       <Slider />
-      <GenaricCategoriesBrands  apiEndpointsArr={categoriesEndpointsAPI} backgroundColor={"#FFFFFF"} headline="Main Categories" imageStyles={categoriesImagesStyles}/>
-      <GenaricSlide  slidesImages={categoriesSlidesImagesArr} slideName="main-category"/>
-      <GenaricCategoriesBrands  apiEndpointsArr={brandsEndpointsApi} backgroundColor={"#2D2F78"} headline="Popular Brands" imageStyles={brandsImagesStyles}/>
-      <GenaricSlide  slidesImages={brandsSlidesImagesArr} slideName="brands"/>
-      <FeaturedMostViewed headline={"Featured items"}/>
-      <FeaturedMostViewed headline={"Most Viewed items"}/>
-      <ShopNow/>
-      <Footer/>
-      
+      <GenaricCategoriesBrands
+        apiEndpointsArr={categoriesEndpointsAPI}
+        backgroundColor={"#FFFFFF"}
+        headline="Main Categories"
+        imageStyles={categoriesImagesStyles}
+      />
+      <GenaricSlide
+        slidesImages={categoriesSlidesImagesArr}
+        slideName="main-category"
+      />
+      <GenaricCategoriesBrands
+        apiEndpointsArr={brandsEndpointsApi}
+        backgroundColor={"#2D2F78"}
+        headline="Popular Brands"
+        imageStyles={brandsImagesStyles}
+      />
+      <GenaricSlide slidesImages={brandsSlidesImagesArr} slideName="brands" />
+      <FeaturedMostViewed headline={"Featured items"} />
+      <FeaturedMostViewed headline={"Most Viewed items"} />
+      <ShopNow />
+      <Footer />
     </>
   );
 };

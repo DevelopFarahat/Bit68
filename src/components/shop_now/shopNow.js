@@ -5,10 +5,10 @@ const ShopNow = ()=>{
     return(
         <div className={ShopeNowStyles.shopNow}>
             <div>
-                <img src={ShopeOne} alt={ShopeOne.substr(ShopeOne.lastIndexOf("/")).split(".")[0]}/>
+                <img src={ShopeOne} alt={ShopeOne.substr(ShopeOne.lastIndexOf("/")+1).split(".")[0]}/>
             </div>
             <div>
-            <img src={ShopeTwo} alt={ShopeTwo.substr(ShopeTwo.lastIndexOf("/")).split(".")[0]}/>
+            <img src={ShopeTwo} alt={ShopeTwo.substr(ShopeTwo.lastIndexOf("/")+1).split(".")[0]}/>
             </div>
         </div>
     )

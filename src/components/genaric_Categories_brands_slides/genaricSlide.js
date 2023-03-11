@@ -1,6 +1,6 @@
 import GenaricSlideStyles from "./genaricSlide.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper";
 const GenaricSlide = ({slidesImages,slideName})=>{
     
     return(
