@@ -1,0 +1,38 @@
+.swiperContainer {
+    width: 100%;
+    /*  height: 67.8vh;*/
+    min-height: 90vh;
+    position: relative;
+}
+
+.swiper {
+    position: absolute !important;
+    width: 100%;
+    height: 80%;
+}
+
+.swiperSlide {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 50%;
+}
+
+
+
+@media screen and (max-width:805px) {
+    .swiperContainer {
+        min-height: 47vh;
+    }
+
+    .slide-image {
+        object-position: 89% 50%;
+    }
+}

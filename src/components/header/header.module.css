@@ -1,0 +1,169 @@
+.announcement {
+    width: 100%;
+    min-height: 40px;
+    background-color: #2D2F87;
+    padding: 10px;
+}
+
+.announcement>span {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: Readex Pro, Regular;
+    line-height: 1.5;
+}
+
+header {
+    width: 100%;
+    min-height: 104px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+header>div:nth-child(1){
+    flex: 0 0 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+header>div:nth-child(1) > *{
+
+    margin-left: 3px;
+}
+header>div:nth-child(1)>span {
+    font-family: SF Pro Display, Regular;
+    font-size: 16px;
+    color: #2E2E2E;
+    max-width: 89px;
+    max-height: 19px;
+}
+header>div:nth-child(2) {
+    /*
+    width: 752px;
+    */
+    flex:  0 0 49%;
+    height: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header>div:nth-child(2)>section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #CBCBCB;
+    border-radius: 15px;
+}
+
+header>div:nth-child(2)>section>input {
+    border: none;
+    outline: none;
+    flex: 0 0 75%;
+}
+
+header>div:nth-child(2)>section>.serachIcon {
+    max-width: 24px;
+    max-height: 24px;
+}
+header > div:nth-child(3){
+    flex: 0 0 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+header > div:nth-child(3) > div:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+header > div:nth-child(3) > div:last-child  > span{
+    font-size: 16px;
+    font-family: Cairo, SemiBold;
+    color: #2D2F82;
+    padding-top: 3px;
+ 
+}
+.cartIcon{
+    width: 24px;
+    height: 19px;
+    position: relative;
+    
+}
+.cartIconContainer{
+    position: relative;
+}
+.cartIconContainer::after{
+    content: "3";
+    display: block;
+    position: absolute;
+    top: -8%;
+    left: 59%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #2D2F82;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: #FFFFFF;
+    font-size: .6rem;
+}
+.DrawerIconContainer{
+    display: none;
+}
+.backdrop{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4,0,0,.5);
+    z-index: 2;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+@media screen and (max-width:979px){
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+    header > div:nth-child(1){
+        display: none;
+    }
+    header > div:nth-child(2){
+        width: 100%;
+        order:2;
+    }
+    header > div:nth-child(3){
+        width: 99%;
+        justify-content: space-between;
+    }
+    .DrawerIconContainer{
+        display: flex;
+        flex: 0 0 85%
+    }
+    header > div:nth-child(3) > div:last-child{
+        flex: 0 0 7%;
+    }
+    header > div:nth-child(3) > div:last-child > span{
+        display: none;
+    }
+}

@@ -1,0 +1,85 @@
+.mainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0 20px 0;
+    gap: 15px;
+}
+
+.mainContainer>span {
+    text-align: start;
+    width: 94%;
+    font-size: 30px;
+    font-family: SF Pro Display, Bold;
+    color: #2D2F78;
+}
+
+.swiper {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*
+    padding: 20px;
+    margin-left: 40px;
+    */
+}
+
+.swiper-slide {
+    width: calc(100%/5) !important;
+    box-sizing: content-box;
+    padding: 10px;
+}
+
+.swiper-slide>img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+.swiper-slide>div>span {
+    font-family: SF Pro Display, Medium;
+    font-size: 18px;
+    color: #000000;
+}
+
+.swiper-slide>div>span+span {
+    font-family: SF Pro Display, Bold;
+    font-size: 28px;
+    color: #BA0829;
+    text-align: start;
+}
+
+.swiper-slide>div>span+span>span {
+    font-size: 16px;
+}
+
+
+@media screen and (max-width:805px){
+    .mainContainer{
+        padding: 0;
+    }
+    .mainContainer > span{
+        padding: 9px;
+        margin: 0;
+    }
+    .swiper-slide{
+        width: 90px !important;
+    }
+    .swiper-slide > div > span + span{
+        font-size: 1rem;
+    }
+}

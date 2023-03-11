@@ -1,0 +1,105 @@
+.mainCategoriesContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+
+.mainCategoriesContainer > span{
+    text-align: start;
+    /*
+    margin-left: 40px;
+    */
+    font-size: 30px;
+    font-family: SF Pro Display, Bold;
+    color: #2D2F78;
+    /*
+    padding: 20px;
+    */
+    text-align: start;
+    width: 89%;
+}
+.mainCategoriesSlider{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.swiper{
+    flex: 0 0 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    /*
+    width: 100px !important;
+    height: 150px;
+    */
+    width: 144px !important;
+    height: 200px !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+
+}
+.swiper-slide > div{
+    width: 80%;
+    height: 54%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+}
+.swiper-slide  > span{
+    font-family: SF Pro Display, Medium;
+    font-size: 20px;
+    color: #050708;
+    text-align: center;
+}
+.swiper > div[class='swiper-wrapper']{
+      display: flex;
+      flex-direction: row;
+      width: 96%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding:  0 0 0 32px;
+      overflow: hidden;
+}
+.swiper-slide > div > img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+@media screen and (max-width:979px){
+    .swiper-slide{
+        width: 94px !important;
+        height: 138px !important;
+    }
+    .swiper-slide > div{
+        width: 80%;
+        height: 54%;
+    }
+}
+
+
+
