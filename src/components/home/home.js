@@ -51,6 +51,7 @@ const Home = () => {
     <>
       <Header />
       <Slider />
+
       <GenaricCategoriesBrands
         apiEndpointsArr={categoriesEndpointsAPI}
         backgroundColor={"#FFFFFF"}

@@ -44,7 +44,7 @@ const Slider = () => {
             clickable: true,
           }}
           navigation={true}
-          modules={[Autoplay,Pagination, Navigation]}
+          modules={[Pagination, Navigation]}
         >
           {sliderImagesArr?.map((sliderImg) => (
             <SwiperSlide

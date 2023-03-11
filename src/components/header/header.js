@@ -5,7 +5,8 @@ import { BsPersonFill } from "react-icons/bs";
 import { FaCartPlus } from "react-icons/fa";
 import DrawerIcon from "../../assets/images/vuesax-linear-menu.svg";
 import React, { useState } from 'react';
-import Navbar from "../navbar/navbar"
+import Navbar from "../navbar/navbar";
+import Offcanvas from 'react-bootstrap/Offcanvas';
 const Header = () => {
   const [show, setShow] = useState(false);
 
@@ -46,11 +47,12 @@ const Header = () => {
               src={DrawerIcon}
               alt={DrawerIcon.substr(DrawerIcon.lastIndexOf("/")+1).split(".")[0]}
               onClick={handleShow}
+              role="button"
              />
           </div>
           <div>
             <span>العربية</span>
-            <BsPersonFill style={{ width: "24px", height: "24px" }} />
+            <BsPersonFill style={{ width: "24px", height: "24px" }} role="button"/>
             <div className={HeaderStyles.cartIconContainer} style={{paddingTop:'6px'}}> <FaCartPlus className={HeaderStyles.cartIcon} /></div>
            
           </div>

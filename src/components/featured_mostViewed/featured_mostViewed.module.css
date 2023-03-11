@@ -80,6 +80,6 @@
         width: 90px !important;
     }
     .swiper-slide > div > span + span{
-        font-size: 1rem;
+        font-size: .6rem;
     }
 }

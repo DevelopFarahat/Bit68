@@ -21,20 +21,14 @@ nav > ul > li:last-of-type{
     color: #FFD800;
 }
 .drawer{
-    position: absolute;
     display: flex;
-    top:0;
-    left: 0;
-    width: 0;
-    height: 100vh;
-    z-index: 5;
-    padding: 0;
-    background-color: #F7F7F7;
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
+    min-width: 291.250px;
+    max-width: 80%;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
 
 .navigation-list{
@@ -84,7 +78,20 @@ nav > ul > li:last-of-type{
 }
 @media screen and (max-width:979px) {
     nav{
+        position: absolute;
         display: none;
-    }
+        top:0;
+        left: 0;
+        width: 0;
+        height: 100vh;
+        z-index: 5;
+        padding: 0;
+        background-color: #F7F7F7;
+        transition: all .5s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+}
     
 }

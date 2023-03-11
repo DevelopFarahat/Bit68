@@ -47,11 +47,14 @@ footer > div > div > ul{
    gap: 10px;
 }
 footer > div > div > ul > li{
-    color: #2E2E2E;
     font-family: SF Pro Display, Light;
     font-size: 16px;
     text-align: start;
     white-space: nowrap;
+}
+footer > div > div > ul > li > a{
+    text-decoration: none;
+    color: #2E2E2E;
 }
 footer > div + span{
     font-family: SF Pro Display, Regular;

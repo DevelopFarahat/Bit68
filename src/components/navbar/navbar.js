@@ -1,18 +1,12 @@
 import NavbarStyles from "./navbar.module.css";
 import { AiOutlineClose } from "react-icons/ai";
 import storeIcon from "../../assets/images/vuesax-bold-map.svg";
-import { useEffect, useState } from "react";
+
 const Navbar = ({ show, handleClose }) => {
-  const [drawerWidth,setDrawerWidth] = useState(true);
-  useEffect(()=>{
-    let width = setTimeout(()=>{
-      setDrawerWidth((previous)=> !previous)
-    },0);
-    return ()=> clearTimeout(width);
-  },[show]);
+
 
   return (
-    <nav className={`${show ? NavbarStyles.drawer : ""}`} style={{minWidth:drawerWidth?'291.250px':'0',maxWidth:drawerWidth?'80%':'0'}}>
+    <nav className={`${show ? NavbarStyles.drawer : ""} `} >
       <ul className={`${show ? NavbarStyles["navigation-list"] : ""}`}>
         <li style={{display:show?'flex':'none'}}>
           <AiOutlineClose  className={NavbarStyles['drawer-close']} onClick={handleClose}/>

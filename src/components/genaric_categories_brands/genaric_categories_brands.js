@@ -14,7 +14,7 @@ import axios from "axios";
 
 const GenaricCategoriesBrands = ({ apiEndpointsArr,backgroundColor,imageStyles,headline }) => {
   const [mainSlidesArr, setMainSlidesArr] = useState([]);
-  const [slidePreoperities,setSlidePreoperities] = useState({slidesPerView:6,spaceBetween:120});
+  const [slidePreoperities,setSlidePreoperities] = useState({slidesPerView:6,spaceBetween:110});
   useEffect(() => {
     let abortController;
     abortController = new AbortController();
