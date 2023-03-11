@@ -37,7 +37,6 @@ const GenaricCategoriesBrands = ({ apiEndpointsArr,backgroundColor,imageStyles,h
 
   useEffect(()=>{
     function handleResize() {
-      console.log("width: ", window.innerWidth, "px");
       if(window.innerWidth <= 700)
       setSlidePreoperities({slidesPerView:'auto',spaceBetween:0});
       else setSlidePreoperities({slidesPerView:6,spaceBetween:120});
